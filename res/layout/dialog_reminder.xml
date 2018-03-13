@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg" >
+
+    <TextView
+        android:id="@+id/dia_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="提示"
+        android:textColor="#00C87D"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/remind"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/dia_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="到这里去？"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remind"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dia_cancle"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_normal_green"
+            android:text="取消"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/dia_ok"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_normal_green"
+            android:text="确定"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

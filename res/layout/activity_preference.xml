@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".PreferenceActivity" >
+
+    <LinearLayout
+        android:id="@+id/preference_lin_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/app_main_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/preference_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button_back"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置关于"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/app_ico"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_travelmate" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="小毛驴友"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#555555"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="#DFDFDF" />
+
+    <TextView
+        android:id="@+id/clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_normal_gray"
+        android:clickable="true"
+        android:drawableLeft="@drawable/clear"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="清除缓存"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DFDFDF" />
+
+    <LinearLayout
+        android:id="@+id/update_lin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_normal_gray"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:drawableLeft="@drawable/update"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="检查更新"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/update_info"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:textColor="#868686"
+            android:textSize="15sp" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DFDFDF" />
+
+    <TextView
+        android:id="@+id/function"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_normal_gray"
+        android:clickable="true"
+        android:drawableLeft="@drawable/function"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="功能介绍"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DFDFDF" />
+
+    <TextView
+        android:id="@+id/suggest"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_normal_gray"
+        android:clickable="true"
+        android:drawableLeft="@drawable/suggest"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="意见反馈"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DFDFDF" />
+
+</LinearLayout>

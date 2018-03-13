@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg" >
+
+    <TextView
+        android:id="@+id/dia_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="请留言"
+        android:textColor="#00C87D"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/words"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/dia_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_edit_text_gray"
+        android:gravity="top|left"
+        android:hint="留下你的足迹吧！"
+        android:padding="4dp"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/bubble_color_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/words"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="颜色:"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/bubble_yellow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_menu_yellow"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/small_yellow"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="栀黄"
+            android:textColor="#828282"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/bubble_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_menu_green"
+            android:button="@null"
+            android:drawableTop="@drawable/small_green"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="葱绿"
+            android:textColor="#828282"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/bubble_purple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bubble_purple"
+            android:button="@null"
+            android:drawableTop="@drawable/small_purp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="薄紫"
+            android:textColor="#828282"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/bubble_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_menu_light_blue"
+            android:button="@null"
+            android:drawableTop="@drawable/small_blue"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="空蓝"
+            android:textColor="#828282"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/bubble_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bubble_black"
+            android:button="@null"
+            android:drawableTop="@drawable/small_black"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="酷黑"
+            android:textColor="#828282"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bubble_color_group"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dia_cancle"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_normal_green"
+            android:text="取消"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/dia_ok"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_normal_green"
+            android:text="确定"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

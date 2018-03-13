@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="7dp"
+        android:background="@drawable/dialog_bg" >
+
+        <com.jayrun.widgets.AutoListView
+            android:id="@+id/words_details_list"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/dialog_bg"
+            android:listSelector="@drawable/bg_button_normal_gray"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:smoothScrollbar="true" >
+        </com.jayrun.widgets.AutoListView>
+
+        <!-- <ImageView
+            android:id="@+id/show_all_mark"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:src="@drawable/bg_button_words_details" /> -->
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/details_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:src="@drawable/cha" />
+
+</RelativeLayout>

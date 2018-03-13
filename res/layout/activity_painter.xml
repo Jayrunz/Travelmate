@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paint_bg"
+    android:orientation="vertical"
+    tools:context=".PainterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/paint_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/paint_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@drawable/text_color_white_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="涂鸦留言"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/paint_submit"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="提交"
+            android:textColor="@drawable/text_color_white_gray"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingBottom="40dp"
+        android:paddingTop="60dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="宽度："
+            android:textColor="#555555" />
+
+        <SeekBar
+            android:id="@+id/pen_width"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="50"
+            android:progress="10"
+            android:progressDrawable="@drawable/bg_seekbar_paint_width"
+            android:thumb="@drawable/bg_button_seek_bar_thumb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="透明度："
+            android:textColor="#555555" />
+
+        <SeekBar
+            android:id="@+id/pen_alpha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="255"
+            android:progressDrawable="@drawable/bg_seekbar_paint_alpha"
+            android:thumb="@drawable/bg_button_seek_bar_thumb" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/paint_board"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" >
+
+        <View
+            android:id="@+id/paint_bg_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <com.jayrun.widgets.HuaBanView
+            android:id="@+id/paint_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parent_of_popwin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/paint_undo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_button_undo_redo_bg"
+                android:clickable="true"
+                android:padding="3dp"
+                android:src="@drawable/bg_button_undo" />
+
+            <ImageView
+                android:id="@+id/paint_redo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_button_undo_redo_bg"
+                android:clickable="true"
+                android:padding="3dp"
+                android:src="@drawable/bg_button_redo" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@color/paint_bg"
+        android:baselineAligned="true" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/paint_style"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="2dp"
+                android:src="@drawable/bg_button_pen_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/paint_color"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="2dp"
+                android:src="@drawable/bg_button_color_red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/paint_bg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button_color_white"
+                android:padding="4dp"
+                android:src="@drawable/bg_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/paint_clear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@drawable/bg_button_clear_canvas" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

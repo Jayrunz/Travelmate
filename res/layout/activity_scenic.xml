@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.jayrun.travelmate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScenicActivity" >
+
+    <LinearLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#00C87D"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@drawable/text_color_white_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/scenic_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.jayrun.widgets.CircleImageView
+            android:id="@+id/scenic_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            app:border_color="@color/white"
+            app:border_width="1dp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FAFBFD"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/intro"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/radiobutton_intro"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="景区简介"
+            android:textColor="@drawable/text_color_gray_green"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/leave_words"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/radiobutton_leave_words"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="地标留言"
+            android:textColor="@drawable/text_color_gray_green"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/route"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/radiobutton_route"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="线路规划"
+            android:textColor="@drawable/text_color_gray_green"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/strategy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/radiobutton_strategy"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="分享攻略"
+            android:textColor="@drawable/text_color_gray_green"
+            android:textSize="11sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/black_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/radio_group"
+        android:background="#EEEEEE" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/black_line"
+        android:layout_below="@id/rela_title" >
+    </FrameLayout>
+
+</RelativeLayout>

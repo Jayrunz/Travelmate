@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_edit_text_white_corner"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/around_info_title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="肯德基"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/around_info_snippet"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/bg_edit_text_gray"
+        android:gravity="left|top"
+        android:maxLines="4"
+        android:padding="3dp"
+        android:text="河南大学新校区东苑公寓21号楼617c" />
+
+    <Button
+        android:id="@+id/get_way_there"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_button_normal_green"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Go"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+</LinearLayout>

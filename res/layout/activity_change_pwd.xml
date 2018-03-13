@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/change_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/app_main_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/change_pwd_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button_back"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改密码"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/change_pwd_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="#efefef"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/change_pwd_old"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_edit_text_lightgray"
+            android:drawableLeft="@drawable/security_img"
+            android:drawablePadding="5dp"
+            android:hint="请输入原密码"
+            android:inputType="textPassword"
+            android:textColor="@color/app_main_gray"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/change_pwd_new1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bg_edit_text_lightgray"
+            android:drawableLeft="@drawable/password_img"
+            android:drawablePadding="5dp"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/app_main_gray"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/change_pwd_new2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bg_edit_text_lightgray"
+            android:drawableLeft="@drawable/password_img"
+            android:drawablePadding="5dp"
+            android:hint="请确认密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/app_main_gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/change_password_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_button_complete"
+        android:text="确认修改"
+        android:textColor="@color/white" />
+
+</LinearLayout>

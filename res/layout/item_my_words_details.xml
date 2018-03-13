@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.jayrun.travelmate"
+    android:id="@+id/rela"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <com.jayrun.widgets.CircleImageView
+        android:id="@+id/my_words_details_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:border_color="@color/white"
+        app:border_width="1dp" />
+
+    <TextView
+        android:id="@+id/my_words_details_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/my_words_details_head"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/my_words_details_head"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="小新"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/delete_word"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/bg_button_delete" />
+
+    <RelativeLayout
+        android:id="@+id/my_words_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_words_details_head" >
+
+        <TextView
+            android:id="@+id/my_words_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_edit_text_gray"
+            android:padding="5dp"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/my_words_graffi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/my_words_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/my_words_details_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|bottom"
+            android:text="昨天"
+            android:textColor="#868686"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/loca_img"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/locim" />
+
+        <TextView
+            android:id="@+id/word_scenic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="left|bottom"
+            android:singleLine="true"
+            android:textColor="#868686"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/my_words_details_like_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="1dp"
+            android:clickable="false"
+            android:src="@drawable/like" />
+
+        <TextView
+            android:id="@+id/my_words_details_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:gravity="left|bottom"
+            android:textColor="#868686"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

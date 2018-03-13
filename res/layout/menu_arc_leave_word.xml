@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jayrun.widgets.ArcMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:def="http://schemas.android.com/apk/res/com.jayrun.travelmate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:layout_marginRight="15dp"
+    def:position="right_bottom"
+    def:radius="100dp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_button_paint_words" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_button_edit_words" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_button_words_details" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_button_all_words" />
+    <!-- 中间菜单按钮 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_button_more_button" />
+
+</com.jayrun.widgets.ArcMenu>

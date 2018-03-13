@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/map_searchview_edit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edit_map_search"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 输入的搜索信息 -->
+
+        <EditText
+            android:id="@+id/map_search_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="搜索附近，或长按选择地点"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="#88000000"
+            android:textColorHint="#88222222"
+            android:textSize="15sp" />
+
+        <!-- 清空搜索文字按钮 -->
+
+        <ImageView
+            android:id="@+id/map_clear_search_text"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_button_alpha_green"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/cha_map"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/map_search_begin"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_button_search"
+        android:padding="10dp"
+        android:src="@drawable/search" />
+
+</LinearLayout>

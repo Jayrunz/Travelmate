@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/title_linear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00C87D"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/show_menu"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_button_back"
+                android:padding="3dp"
+                android:src="@drawable/menu" />
+
+            <TextView
+                android:id="@+id/scenic_type"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="景区"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <include
+                android:id="@+id/main_search"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                layout="@layout/layout_search_view" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#5222" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" >
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:fadingEdge="@null"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/hsv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/tab_bootom_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/bg_bootom_line_green" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/scenic_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/hsv_view" >
+            </android.support.v4.view.ViewPager>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/hsv_view"
+                android:background="#eeeeee" />
+
+            <ImageView
+                android:id="@+id/loading_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/hsv_view"
+                android:background="#FBFDFC"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/animation_loading"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/filed_to_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/loading_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/bg_button_login_register"
+                android:padding="5dp"
+                android:text="加载失败，请点击重试！"
+                android:textColor="@drawable/text_color_green_white"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

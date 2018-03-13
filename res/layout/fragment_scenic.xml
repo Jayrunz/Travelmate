@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScenicFragment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/scenic_pic"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/scenic_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/scenic_pic"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/gang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/scenic_location"
+                android:layout_toRightOf="@id/scenic_location"
+                android:text=" | "
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/scenic_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/scenic_location"
+                android:layout_toRightOf="@id/gang"
+                android:textColor="#ffcc00" />
+
+            <TextView
+                android:id="@+id/scenic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/scenic_location"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scenic_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scenic_pic"
+                android:padding="5dp"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_read_description"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="false" >
+
+        <ImageView
+            android:id="@+id/voice_speaking"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="false"
+            android:src="@drawable/animation_voice"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/voice_stop"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:clickable="false"
+            android:src="@drawable/voice3"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

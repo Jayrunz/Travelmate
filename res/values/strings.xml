@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_url">Url</string>
+    <string name="tag_parent_pos">parentPos</string>
+    <string name="tag_child_pos">childPos</string>
+    <string name="app_name">小毛驴友</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_scenic">ScenicActivity</string>
+    <string name="province">省/市</string>
+    <string name="city">市/区</string>
+    <string name="county">县</string>
+    <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无动态哦！~</string>
+    <string name="more">加载中</string>
+
+    <!-- 消除警告，可忽略 -->
+    <string name="d">图片描述</string>
+
+    <string-array name="province_array">
+        <item>北京</item>
+        <item>上海</item>
+        <item>河南</item>
+        <item>四川</item>
+        <item>湖南</item>
+        <item>陕西</item>
+        <item>北京</item>
+        <item>上海</item>
+        <item>河南</item>
+        <item>四川</item>
+        <item>湖南</item>
+        <item>陕西</item>
+        <item>北京</item>
+        <item>上海</item>
+        <item>河南</item>
+        <item>四川</item>
+        <item>湖南</item>
+        <item>陕西</item>
+    </string-array>
+    <string-array name="city_array">
+        <item>开封</item>
+        <item>郑州</item>
+        <item>商丘</item>
+        <item>登封</item>
+        <item>兰考</item>
+        <item>中牟</item>
+    </string-array>
+    <string-array name="county_array">
+        <item>柘城</item>
+        <item>夏邑</item>
+        <item>虞城</item>
+        <item>宁陵</item>
+        <item>睢阳</item>
+    </string-array>
+
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_strategy">AddStrategyActivity</string>
+    <string name="title_activity_strategy_detail">StrategyDetailActivity</string>
+    <string name="title_activity_phone_login">PhoneLoginActivity</string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_my_words">MyWordsActivity</string>
+    <string name="title_activity_my_strategy">MyStrategyActivity</string>
+    <string name="title_activity_edit_user_info">EditUserInfoActivity</string>
+    <string name="title_activity_change_pwd">ChangePwdActivity</string>
+    <string name="title_activity_preference">PreferenceActivity</string>
+    <string name="title_activity_suggestion">SuggestionActivity</string>
+    <string name="title_activity_painter">PainterActivity</string>
+    <string name="title_activity_near_words">NearWordsActivity</string>
+
+</resources>

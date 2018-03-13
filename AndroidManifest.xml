@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jayrun.travelmate"
+    android:versionCode="3"
+    android:versionName="3.0 beta" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="18" />
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <!-- 网络权限 -->
+    <!-- Push SDK权限 end -->
+    <!-- 允许网络连接以及网络状态改变 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 文件存储 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.jayrun.travelmate.TravelmateApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_travelmate"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!-- 高德地图的配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6d85a00331f52504384330c9b0086dcc" />
+        <!-- 配置比目的自动更新的dialog -->
+        <meta-data
+            android:name="WEIBO_APPKEY"
+            android:value="2530041509" />
+        <meta-data
+            android:name="WEIBO_CHANNEL"
+            android:value="weibo" />
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="&apos;57355924&apos;" />
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo" />
+
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 配置qq -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105311195" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微博的activity -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!-- 系统activity -->
+        <activity
+            android:name="com.jayrun.travelmate.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.WayOfLoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.ScenicActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scenic"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.WalkRouteDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.AddStrategyActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.TestPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jayrun.photo.activity.PhotoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jayrun.photo.activity.AlbumActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.ImageFile"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.ShowAllPhoto"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.photo.activity.GalleryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.StrategyDetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_strategy_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.PhoneLoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_phone_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.ForgetPasswordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_forget_password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.UserInfoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.MyWordsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_words"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.MyStrategyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_strategy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.EditUserInfoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_edit_user_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.ChangePwdActivity"
+            android:exported="false"
+            android:label="@string/title_activity_change_pwd"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.PreferenceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_preference"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.SuggestionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.ImagePagerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 高德的service -->
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:exported="false" >
+        </service>
+        <!-- 新浪的service -->
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" >
+        </service>
+        <!-- 应用的service -->
+        <service
+            android:name="com.jayrun.services.UploadStrategyService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.UploadStrategyService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.jayrun.services.UploadHeadService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.UploadHeadService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.jayrun.services.UpdateReadCountService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.UpdateReadCountService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.jayrun.services.UploadGraffitiService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.UploadGraffitiService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.jayrun.services.ChangeUrlCursorService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.ChangeUrlCursorService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.jayrun.services.LocationService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jayrun.services.LocationService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.jayrun.travelmate.PainterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_painter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.NearWordsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_near_words"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jayrun.travelmate.IntroActivity"
+            android:exported="false"
+            android:label="@string/title_activity_near_words"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+    </application>
+
+</manifest>

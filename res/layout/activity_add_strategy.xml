@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_main_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#00ffffff"
+            android:clickable="true"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@drawable/text_color_white_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/publish_strategy"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00ffffff"
+            android:clickable="true"
+            android:text="发表"
+            android:textColor="@drawable/text_color_white_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_title"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/upload_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_style"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/add_strategy"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/edit_bg"
+            android:gravity="left|top"
+            android:hint="来分享你的经验吧！"
+            android:maxLength="500"
+            android:padding="3dp"
+            android:textColor="#434343"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_linear"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#FFFFFB"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <GridView
+            android:id="@+id/noScrollgridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:columnWidth="68dp"
+            android:horizontalSpacing="3dp"
+            android:numColumns="4"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" >
+        </GridView>
+    </LinearLayout>
+
+</RelativeLayout>

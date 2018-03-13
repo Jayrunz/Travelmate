@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/searchview_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="55dp"
+        android:background="#0fff"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- 输入的搜索信息 -->
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:hint="搜索景区、地点、类型"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="#ddffffff"
+            android:textColorHint="#88ffffff"
+            android:textSize="16sp" >
+        </EditText>
+
+        <!-- 清空搜索文字按钮 -->
+
+        <ImageView
+            android:id="@+id/clear_search_text"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_back"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/clear_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/search_begin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_button_back"
+        android:focusable="false"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="2dp"
+        android:src="@drawable/search" />
+
+    <TextView
+        android:id="@+id/search_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

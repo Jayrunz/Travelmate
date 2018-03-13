@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.jayrun.travelmate"
+    android:id="@+id/rela"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" >
+
+    <com.jayrun.widgets.CircleImageView
+        android:id="@+id/words_details_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:border_color="@color/white"
+        app:border_width="1dp" />
+
+    <TextView
+        android:id="@+id/words_details_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/words_details_head"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/words_details_head"
+        android:gravity="center_vertical"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/words_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/words_details_head" >
+
+        <TextView
+            android:id="@+id/words_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_edit_text_gray"
+            android:padding="5dp"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/words_graffiti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/words_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/words_details_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="bottom"
+            android:textColor="#868686" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/words_details_like_img"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/bg_button_like" />
+
+        <TextView
+            android:id="@+id/words_details_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:gravity="bottom"
+            android:textColor="#868686" />
+    </LinearLayout>
+
+</RelativeLayout>
